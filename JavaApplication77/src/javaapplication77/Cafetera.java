@@ -28,13 +28,15 @@ public class Cafetera extends Electrodomestico{
         this.lecheEspumada = lecheEspumada;
     }
     
-    public void precioFinal(double precio) {
+    @Override
+    public double precioFinal() {
+        precio= super.precioFinal();
         if (latte.equalsIgnoreCase("si")){
             precio = precio+500;
         if (lecheEspumada.equalsIgnoreCase("si"))
             precio = precio+500;
         }
-        
+        return precio;
     }
     
     

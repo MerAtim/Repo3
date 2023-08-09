@@ -20,9 +20,11 @@ public class JavaApplication77 {
     
     Electrodomestico tele = new Televisor(15.0, true, 500, "AZUL", 'A', 10);
     Electrodomestico lavadora = new Lavadora(10, 100, "NEGRO", 'B', 15);
-    Electrodomestico cafetera = new Cafetera(100, "GRIS", 'A', 2, "latte", "lecheEspumada");
+    Electrodomestico cafetera = new Cafetera(100, "GRIS", 'A', 2, "si", "si");
     
         System.out.println(tele.precioFinal());
+        System.out.println(lavadora.precioFinal());
+        System.out.println(cafetera.precioFinal());
     
 }
 }

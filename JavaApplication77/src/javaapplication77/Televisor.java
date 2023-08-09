@@ -39,12 +39,13 @@ public class Televisor extends Electrodomestico{
         this.TDT = TDT;
     }
     
-    public double precioFinal(){
+    @Override
+        public double precioFinal(){
         
         double precio = super.precioFinal();
                 
         if (resolucion > 30){
-            precio *=0.3;
+            precio *=1.3;
         }
         
         if (TDT){
