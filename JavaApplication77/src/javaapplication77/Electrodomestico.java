@@ -114,6 +114,8 @@ public class Electrodomestico {
             if (peso>=80){
             precio+=1000;
           }
+            
+            return precio;
     }
-  
 }
+

@@ -7,12 +7,9 @@ public class Lavadora extends Electrodomestico {
     public Lavadora() {
     }
 
-    public void Constructor_todos() {
-        this.Precio=Precio;
-        this.Color=Color;
-        this.ConsumoEnergetico=ConsumoEnergetico;
-        this.Peso=Peso;
-        this.Carga=Carga;
+    public Lavadora(double Carga, double precio, String color, char consumoEnergetico, double peso) {
+        super(precio, color, consumoEnergetico, peso);
+        this.Carga = Carga;
     }
 
     public double getCarga() {
@@ -23,41 +20,11 @@ public class Lavadora extends Electrodomestico {
         this.Carga = Carga;
     }
 
-    public Object getPrecio() {
-        return Precio;
-    }
-
-    public void setPrecio(Object Precio) {
-        this.Precio = Precio;
-    }
-
-    public Object getColor() {
-        return Color;
-    }
-
-    public void setColor(Object Color) {
-        this.Color = Color;
-    }
-
-    public Object getConsumoEnergetico() {
-        return ConsumoEnergetico;
-    }
-
-    public void setConsumoEnergetico(Object ConsumoEnergetico) {
-        this.ConsumoEnergetico = ConsumoEnergetico;
-    }
-
-    public Object getPeso() {
-        return Peso;
-    }
-
-    public void setPeso(Object Peso) {
-        this.Peso = Peso;
-    }
+    
 
     @Override
-  public double PrecioFinal() {
-    double precio = super.PrecioFinal();
+  public double precioFinal() {
+    double precio = super.precioFinal();
     if (Carga > 30) {
       precio += 500;
     }

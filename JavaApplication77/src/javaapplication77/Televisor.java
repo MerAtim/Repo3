@@ -10,18 +10,19 @@ package javaapplication77;
  */
 public class Televisor extends Electrodomestico{
     
-    double resolucion=0;
-    boolean TDT=false;
+    private double resolucion;
+    private boolean TDT;
 
     public Televisor() {
     }
 
     public Televisor(double resolucion, boolean TDT, double precio, String color, char consumoEnergetico, double peso) {
+        super(precio, color, consumoEnergetico, peso);
         this.resolucion = resolucion;
         this.TDT = TDT;
-        super.Electrodomestico(precio,color,consumoEnergetico, peso);
     }
 
+    
     public double getResolucion() {
         return resolucion;
     }
@@ -52,37 +53,6 @@ public class Televisor extends Electrodomestico{
         
         return precio;
     }
-    
-    
-    public double precioFinal(){
-        
-        consumo = comprobarConsumoEnergetico();
-        
-        switch (consumo) {
-            case 'A':
-                precio += 1000;                
-                break;
-            case 'B':
-                precio += 800;                
-                break;
-            case 'C':
-                precio += 600;                
-                break;
-            case 'D':
-                precio += 500;                
-                break;
-            case 'E':
-                precio += 300;                
-                break;
-            case 'F':
-                precio += 100;                
-                break;
-            default:
-                System.out.println("Ocurrio un error");;
-        }
-        
-        peso = comprobarConsumoEnergetico();
-        
-        if peso > 1 && peso >
+
     }
-}
+

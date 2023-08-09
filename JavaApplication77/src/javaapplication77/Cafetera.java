@@ -2,7 +2,7 @@
 package javaapplication77;
 
 
-public class Cafetera extends JavaApplication77{
+public class Cafetera extends Electrodomestico{
     private String latte;
     private String lecheEspumada;
     
